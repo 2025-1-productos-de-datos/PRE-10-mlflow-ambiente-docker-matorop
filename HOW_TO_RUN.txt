@@ -3,7 +3,7 @@ En este punto el unico problema latente es centralizar los
 resultados de las corridas en un solo lugar (disco de red o
 almacenamiento en la nube).
 
-$ docker build -t jdvelasq/mlflow:example .
+$ docker build -t matorop/mlflow:example .
 
 
 
@@ -13,3 +13,5 @@ Debe copiar unicamente el archivo MLproject
 $ mlflow run --env-manager=local -e knn -P n_neighbors=1 .
 $ mlflow run --env-manager=local -e knn -P n_neighbors=2 .
 $ mlflow run --env-manager=local -e elasticnet -P alpha=0.5 -P l1_ratio=0.5 .
+
+docker tag local-image matorop/mtoro:latest
